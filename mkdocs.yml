@@ -36,20 +36,19 @@ nav:
   - Architecture:
     - Overview: architecture/overview.md
     - Hexagonal: architecture/hexagonal.md
-  - Contributing:
+  - Engineering:
     - Overview: contributing/index.md
     - Style Guide: contributing/style.md
     - Architecture Rules: contributing/architecture.md
     - Error Handling: contributing/error-handling.md
     - Security Rules: contributing/security.md
     - NASA Rules: contributing/nasa-rules.md
-    - Commit Messages: contributing/commits.md
+    - Commit Standards: contributing/commits.md
     - Workflow: contributing/workflow.md
   - API Reference:
     - Domain Models: api/domain.md
     - Ports: api/ports.md
     - Adapters: api/adapters.md
-
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

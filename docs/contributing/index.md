@@ -1,12 +1,30 @@
-# Contributing to StrafeKit
+# Engineering Standards
+
 ![CI](https://github.com/StrafeNDestroy/strafekit/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.12+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-linux-lightgrey)
 ![Status](https://img.shields.io/badge/status-active_development-orange)
 
-Quick reference for everyone working on StrafeKit.
-Read this page first — drill into specifics as needed.
+
+This section documents the technical decisions, architecture patterns,
+and development standards used in StrafeKit.
+
+Written as a reference for the project and as a demonstration of
+professional Python development practices.
+
+## About this project
+
+StrafeKit is an active development project built to demonstrate
+professional Python engineering practices:
+
+- Hexagonal architecture with clean separation of concerns
+- Full CI/CD pipeline with automated quality checks
+- Test driven development with pytest
+- Type safe Python with mypy strict mode
+- Security focused development with bandit
+- NASA Power of 10 coding standards
+
 
 ---
 
