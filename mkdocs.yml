@@ -2,6 +2,8 @@ site_name: StrafeKit
 site_url: https://strafendestroy.github.io/strafekit/
 site_description: Professional penetration testing framework
 repo_url: https://github.com/StrafeNDestroy/strafekit
+dev_addr: 127.0.0.1:9000
+
 
 theme:
   name: material
