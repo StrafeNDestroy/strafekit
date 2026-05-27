@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Format check
+        run: uv run ruff format --check strafekit/
+
+      - name: Lint
+        run: uv run ruff check strafekit/
+
+      - name: Security check
+        run: uv run bandit -r strafekit/
+
+      - name: Type check
+        run: uv run mypy strafekit/
+
+      - name: Test
+        # TODO: raise to 80 once domain model tests are written
+        run: uv run pytest --cov=strafekit --cov-fail-under=0

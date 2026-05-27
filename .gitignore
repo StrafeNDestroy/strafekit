@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+.coverage
+coverage.xml
+
+# StrafeKit
+strafekit/config/user.toml
+engagements/*
+!engagements/.gitkeep
+logs/*
+!logs/.gitkeep
+*.db
+
+# Environment
+.env
+
+# Docs
+site/
+
+# OS
+.DS_Store
+Thumbs.db

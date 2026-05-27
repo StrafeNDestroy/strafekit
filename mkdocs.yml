@@ -1,0 +1,59 @@
+site_name: StrafeKit
+site_description: Professional penetration testing framework
+repo_url: https://github.com/StrafeNDestroy/strafekit
+dev_addr: 127.0.0.1:9000
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: purple
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            docstring_style: google
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Hexagonal: architecture/hexagonal.md
+  - Contributing:
+    - Overview: contributing/index.md
+    - Style Guide: contributing/style.md
+    - Architecture Rules: contributing/architecture.md
+    - Error Handling: contributing/error-handling.md
+    - Security Rules: contributing/security.md
+    - NASA Rules: contributing/nasa-rules.md
+    - Commit Messages: contributing/commits.md
+    - Workflow: contributing/workflow.md
+  - API Reference:
+    - Domain Models: api/domain.md
+    - Ports: api/ports.md
+    - Adapters: api/adapters.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - tables
+  - toc:
+      permalink: true

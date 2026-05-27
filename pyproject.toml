@@ -1,0 +1,81 @@
+[project]
+name = "strafekit"
+version = "0.1.0"
+description = "Professional penetration testing framework"
+requires-python = ">=3.12"
+dependencies = [
+  "textual>=0.47.0",
+  "sqlalchemy>=2.0.0",
+  "rich>=13.0.0",
+  "keyring>=24.0.0",
+]
+
+[project.scripts]
+strafekit = "strafekit.main:run"
+
+[dependency-groups]
+dev = [
+  "pytest>=7.0.0",
+  "pytest-asyncio>=0.23.0",
+  "pytest-cov>=4.0.0",
+  "pytest-mock>=3.0.0",
+  "pytest-xdist>=3.8.0",
+  "mypy>=1.0.0",
+  "ruff>=0.4.0",
+  "bandit>=1.7.0",
+  "interrogate>=1.5.0",
+  "pre-commit>=3.0.0",
+  "commitizen>=3.0.0",
+  "mkdocs>=1.5.0",
+  "mkdocs-material>=9.0.0",
+  "mkdocstrings[python]>=0.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-n auto"
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "S", "N", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S"]
+
+[tool.coverage.report]
+# TODO: raise back to 80 once domain model tests are written
+fail_under = 0
+omit = ["strafekit/main.py"]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101"]
+
+[tool.interrogate]
+fail-under = 80
+exclude = ["tests"]
+ignore-init-method = true
+ignore-magic = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"
+schema_pattern = "(?s)(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump|scan|creds)(\\(\\S+\\))?!?:( [^\\n\\r]+)((\\n\\n.*)|(\\s*))?$"
