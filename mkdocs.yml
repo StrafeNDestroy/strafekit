@@ -37,14 +37,14 @@ nav:
     - Overview: architecture/overview.md
     - Hexagonal: architecture/hexagonal.md
   - Engineering:
-    - Overview: contributing/index.md
-    - Style Guide: contributing/style.md
-    - Architecture Rules: contributing/architecture.md
-    - Error Handling: contributing/error-handling.md
-    - Security Rules: contributing/security.md
-    - NASA Rules: contributing/nasa-rules.md
-    - Commit Standards: contributing/commits.md
-    - Workflow: contributing/workflow.md
+    - Overview: engineering/index.md
+    - Style Guide: engineering/style.md
+    - Architecture Rules: engineering/architecture.md
+    - Error Handling: engineering/error-handling.md
+    - Security Rules: engineering/security.md
+    - NASA Rules: engineering/nasa-rules.md
+    - Commit Standards: engineering/commits.md
+    - Workflow: engineering/workflow.md
   - API Reference:
     - Domain Models: api/domain.md
     - Ports: api/ports.md
