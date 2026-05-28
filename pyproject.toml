@@ -78,4 +78,4 @@ ignore-magic = true
 name = "cz_conventional_commits"
 version = "0.1.0"
 tag_format = "v$version"
-schema_pattern = "(?s)(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump|scan|creds)(\\(\\S+\\))?!?:( [^\\n\\r]+)((\\n\\n.*)|(\\s*))?$"
+schema_pattern = "(?s)(blog|build|chore|ci|creds|docs|feat|fix|perf|refactor|revert|scan|style|test|bump)(\\(\\S+\\))?!?:( [^\\n\\r]+)((\\n\\n.*)|(\\s*))?$"
