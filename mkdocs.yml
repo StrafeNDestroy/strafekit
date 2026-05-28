@@ -4,7 +4,6 @@ site_description: Professional penetration testing framework
 repo_url: https://github.com/StrafeNDestroy/strafekit
 dev_addr: 127.0.0.1:9000
 
-
 theme:
   name: material
   palette:
@@ -21,6 +20,12 @@ theme:
 
 plugins:
   - search
+  - blog:
+      blog_dir: blog
+      post_date_format: long
+      post_url_format: "{slug}"
+      archive: true
+      categories: true
   - mkdocstrings:
       handlers:
         python:
@@ -32,6 +37,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Blog: blog/index.md
   - Getting Started: getting-started.md
   - Architecture:
     - Overview: architecture/overview.md
@@ -49,6 +55,7 @@ nav:
     - Domain Models: api/domain.md
     - Ports: api/ports.md
     - Adapters: api/adapters.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

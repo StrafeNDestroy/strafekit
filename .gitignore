@@ -18,6 +18,7 @@ engagements/*
 logs/*
 !logs/.gitkeep
 *.db
+docs/blog/POST_TEMPLATE.md
 
 # Environment
 .env
@@ -28,3 +29,5 @@ site/
 # OS
 .DS_Store
 Thumbs.db
+docs/blog/POST_TEMPLATE.md
+docs/blog/posts/POST_TEMPLATE.md
