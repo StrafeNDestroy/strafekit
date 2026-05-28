@@ -1,5 +1,5 @@
 ---
-date: 2026-05-28 
+date: 2026-05-28
 authors:
   - strafendestroy
 categories:
@@ -7,7 +7,7 @@ categories:
 ---
 
 # Industry Infrastructure
-Upgrading my projects structure from zero to hero.
+Upgrading my project infrastructure from non-exist to industry standard.
 
 
 
@@ -15,11 +15,11 @@ Upgrading my projects structure from zero to hero.
 
 ## Introduction
 For a long time I had been making python projects here and there but never had the experience
-of how to organize a project for not just myself but other contributors. Like many others 
+of how to organize a project for not just myself but other contributors. Like many others
 I didn't design my programs, I just start coding. I had been fascinated with how python projects
 on github looked so different and organzied compared to mine which normally just had a scripts
-folder and maybe some libs. So I decided to learn how to set something up that might be on 
-some industry teams. 
+folder and maybe some libs. So I decided to learn how to set something up that might be on
+some industry teams.
 
 Good structure for a blog post or documentation page. Here's the expanded version with short sections for each:
 
@@ -99,7 +99,7 @@ uv run ruff format strafekit/
 Verifies type annotations are correct without running the code. Catches type
 errors at development time rather than runtime. As someone who came from `C` I
 find it invaluable to explicit types. I would rather find out before runtime
-than get a random type error during an engagement.  
+than get a random type error during an engagement.
 ```bash
 uv run mypy strafekit/
 ```
@@ -126,8 +126,8 @@ uv run safety check
 ---
 
 ## Documentation Generation
-API Documentation is generated from docstrings pulled automatically from the source code. 
- 
+API Documentation is generated from docstrings pulled automatically from the source code.
+
 
 ### Static site — [mkdocs](https://www.mkdocs.org)
 Builds a complete HTML documentation website from markdown files. Handles
@@ -286,8 +286,8 @@ end of file newline, YAML validation, TOML validation, private key detection.
 
 ### Commit messages — [commitizen](https://commitizen-tools.github.io/commitizen)
 Enforces conventional commit message format on every commit. Invalid
-messages are rejected before the commit completes. As with error when possible 
-I like to be explicit in my commits, makes auditing much easier.  
+messages are rejected before the commit completes. As with error when possible
+I like to be explicit in my commits, makes auditing much easier.
 
 ```
 feat(core): add Host domain model
@@ -298,7 +298,7 @@ scan(nmap): add async wrapper
 ---
 ## CI/CD Pipline
 The CI/CD pipeline runs the full quality suite automatically on every push
-to GitHub. Should any of the tests fail the project does not get pushed to the repo. 
+to GitHub. Should any of the tests fail the project does not get pushed to the repo.
 
 ## CI workflow — quality checks:
 ```bash
@@ -310,9 +310,9 @@ Test          → pytest --cov
 ```
 
 ## Docs workflow — documentation deployment:
-This workflow allows me to automaticall deploy and update my program documentaion/blog to a 
-static website hosted on github. Having browser based documentaion that is navigable 
-is a huge plus for any future contributors.  
+This workflow allows me to automaticall deploy and update my program documentaion/blog to a
+static website hosted on github. Having browser based documentaion that is navigable
+is a huge plus for any future contributors.
 ```bash
 yamlBuild docs    → mkdocs build
 Deploy        → mkdocs gh-deploy → gh-pages branch → GitHub Pages
