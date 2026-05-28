@@ -7,7 +7,7 @@ categories:
 ---
 
 # Industry Infrastructure
-Upgrading my project infrastructure from non-exist to industry standard.
+Upgrading my project infrastructure from non-exist to robust.
 
 
 
@@ -20,14 +20,7 @@ I didn't design my programs, I just start coding. I had been fascinated with how
 on github looked so different and organzied compared to mine which normally just had a scripts
 folder and maybe some libs. So I decided to learn how to set something up that might be on
 some industry teams.
-
-Good structure for a blog post or documentation page. Here's the expanded version with short sections for each:
-
----
-
 Here's the full content with links embedded:
-
----
 
 ## Project Manager
 
@@ -98,7 +91,7 @@ uv run ruff format strafekit/
 ### Type checking — [mypy](https://mypy.readthedocs.io)
 Verifies type annotations are correct without running the code. Catches type
 errors at development time rather than runtime. As someone who came from `C` I
-find it invaluable to explicit types. I would rather find out before runtime
+find it invaluable to have explicit types. I would rather find out before runtime
 than get a random type error during an engagement.
 ```bash
 uv run mypy strafekit/
@@ -111,6 +104,7 @@ Security tools catch vulnerabilities in your own code and your dependencies
 before they reach production.
 
 ### Static analysis — [bandit](https://bandit.readthedocs.io)
+Checks for known security issues
 ```bash
 uv run bandit -r strafekit/
 ```
@@ -118,7 +112,7 @@ uv run bandit -r strafekit/
 ### Dependency scanning — [safety](https://pypi.org/project/safety)
 Checks every package in `uv.lock` against a database of known CVEs. Catches
 vulnerable dependencies before they become a problem. Especially now that
-packagemanagers are the target for large scale vulnerability distribution.
+package managers are the target for large scale vulnerability distribution.
 ```bash
 uv run safety check
 ```
@@ -127,8 +121,6 @@ uv run safety check
 
 ## Documentation Generation
 API Documentation is generated from docstrings pulled automatically from the source code.
-
-
 ### Static site — [mkdocs](https://www.mkdocs.org)
 Builds a complete HTML documentation website from markdown files. Handles
 navigation, search, theming, and deployment to GitHub Pages.
@@ -145,12 +137,10 @@ search, code highlighting, and mobile support.
 Reads Python docstrings from source code and renders them as API reference
 pages automatically. Write the docstring once and it appears in both the code
 and the documentation.
-Here's the updated section:
 
 ---
 
 ### API reference — [mkdocstrings](https://mkdocstrings.github.io)
-
 Reads Python docstrings from source code and renders them as API reference
 pages automatically. Write the docstring once and it appears in both the code
 and the documentation.
@@ -271,7 +261,7 @@ run time significantly as the suite grows.
 ## Standards Enforcement
 Standards enforcement tools ensure consistent practices such as
 formatting,linting, security checks are followed on
-every commit — automatically, without relying on memory or discipline.
+every commit automatically, without relying on memory or discipline.
 
 ### Pre-commit hooks — [pre-commit](https://pre-commit.com)
 Runs a configured set of checks before every `git commit`. If any check
@@ -317,9 +307,6 @@ is a huge plus for any future contributors.
 yamlBuild docs    → mkdocs build
 Deploy        → mkdocs gh-deploy → gh-pages branch → GitHub Pages
 ```
-
-
-
 
 ## Packaging
 Packaging tools turn your source code into something others can install
