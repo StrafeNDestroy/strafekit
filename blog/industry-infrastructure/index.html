@@ -1522,7 +1522,7 @@
 
 
 <h1 id="industry-infrastructure">Industry Infrastructure</h1>
-<p>Upgrading my project infrastructure from non-exist to industry standard.</p>
+<p>Upgrading my project infrastructure from non-exist to robust.</p>
 <!-- more -->
 
 <h2 id="introduction">Introduction</h2>
@@ -1531,11 +1531,8 @@ of how to organize a project for not just myself but other contributors. Like ma
 I didn't design my programs, I just start coding. I had been fascinated with how python projects
 on github looked so different and organzied compared to mine which normally just had a scripts
 folder and maybe some libs. So I decided to learn how to set something up that might be on
-some industry teams.</p>
-<p>Good structure for a blog post or documentation page. Here's the expanded version with short sections for each:</p>
-<hr />
-<p>Here's the full content with links embedded:</p>
-<hr />
+some industry teams.
+Here's the full content with links embedded:</p>
 <h2 id="project-manager">Project Manager</h2>
 <p>I had originally wanted to use <code>pipx</code> but then learned of the modern <a href="https://docs.astral.sh/uv">uv</a> Python
 manager. It replaces several separate tools:</p>
@@ -1613,7 +1610,7 @@ bracket placement. Fixes automatically with no intervention.
 <h3 id="type-checking-mypy">Type checking — <a href="https://mypy.readthedocs.io">mypy</a></h3>
 <p>Verifies type annotations are correct without running the code. Catches type
 errors at development time rather than runtime. As someone who came from <code>C</code> I
-find it invaluable to explicit types. I would rather find out before runtime
+find it invaluable to have explicit types. I would rather find out before runtime
 than get a random type error during an engagement.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>run<span class="w"> </span>mypy<span class="w"> </span>strafekit/
 </code></pre></div></p>
@@ -1622,12 +1619,13 @@ than get a random type error during an engagement.
 <p>Security tools catch vulnerabilities in your own code and your dependencies
 before they reach production.</p>
 <h3 id="static-analysis-bandit">Static analysis — <a href="https://bandit.readthedocs.io">bandit</a></h3>
+<p>Checks for known security issues
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>uv<span class="w"> </span>run<span class="w"> </span>bandit<span class="w"> </span>-r<span class="w"> </span>strafekit/
-</code></pre></div>
+</code></pre></div></p>
 <h3 id="dependency-scanning-safety">Dependency scanning — <a href="https://pypi.org/project/safety">safety</a></h3>
 <p>Checks every package in <code>uv.lock</code> against a database of known CVEs. Catches
 vulnerable dependencies before they become a problem. Especially now that
-packagemanagers are the target for large scale vulnerability distribution.
+package managers are the target for large scale vulnerability distribution.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>run<span class="w"> </span>safety<span class="w"> </span>check
 </code></pre></div></p>
 <hr />
@@ -1645,8 +1643,7 @@ search, code highlighting, and mobile support.</p>
 <h3 id="api-reference-mkdocstrings">API reference — <a href="https://mkdocstrings.github.io">mkdocstrings</a></h3>
 <p>Reads Python docstrings from source code and renders them as API reference
 pages automatically. Write the docstring once and it appears in both the code
-and the documentation.
-Here's the updated section:</p>
+and the documentation.</p>
 <hr />
 <h3 id="api-reference-mkdocstrings_1">API reference — <a href="https://mkdocstrings.github.io">mkdocstrings</a></h3>
 <p>Reads Python docstrings from source code and renders them as API reference
@@ -1740,7 +1737,7 @@ run time significantly as the suite grows.</p>
 <h2 id="standards-enforcement">Standards Enforcement</h2>
 <p>Standards enforcement tools ensure consistent practices such as
 formatting,linting, security checks are followed on
-every commit — automatically, without relying on memory or discipline.</p>
+every commit automatically, without relying on memory or discipline.</p>
 <h3 id="pre-commit-hooks-pre-commit">Pre-commit hooks — <a href="https://pre-commit.com">pre-commit</a></h3>
 <p>Runs a configured set of checks before every <code>git commit</code>. If any check
 fails the commit is blocked until the issue is fixed. Catches problems
