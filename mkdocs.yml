@@ -3,6 +3,8 @@ site_url: https://strafendestroy.github.io/strafekit/
 site_description: Professional penetration testing framework
 repo_url: https://github.com/StrafeNDestroy/strafekit
 dev_addr: 127.0.0.1:9000
+exclude_docs: |
+  blog/POST_TEMPLATE.md     permalink: true
 
 theme:
   name: material
@@ -42,7 +44,7 @@ nav:
   - Architecture:
     - Overview: architecture/overview.md
     - Hexagonal: architecture/hexagonal.md
-  - Devlopment Standards :
+  - Devlopment Standards:
     - Overview: development_standards/index.md
     - Style Guide: development_standards/style.md
     - Architecture Rules: development_standards/architecture.md
@@ -64,4 +66,3 @@ markdown_extensions:
   - admonition
   - tables
   - toc:
-      permalink: true
