@@ -6,47 +6,36 @@ Invalid messages are rejected before the commit completes.
 ---
 
 ## Format
-
-```
 type(scope): short description
-```
-
-```
+blog(post): add infrastructure setup post
+chore(deps): update textual to latest
+creds(sqlite): add domain filtering query
+docs(api): add docstrings to Host model
 feat(scan): add async nmap wrapper
 fix(creds): handle duplicate domain entries
-docs(api): add docstrings to Host model
-test(spray): add unit tests for password spray
 scan(nmap): add service version detection
-creds(sqlite): add domain filtering query
-chore(deps): update textual to latest
-```
+test(spray): add unit tests for password spray
 
 ---
 
-## Standard types
+## All types
 
 | Type | When to use |
 |---|---|
+| `blog` | blog posts and writing |
+| `build` | build system changes |
+| `chore` | dependency updates, config changes |
+| `ci` | CI/CD pipeline changes |
+| `creds` | credential management — storage, spray logic, hash handling |
+| `docs` | documentation only |
 | `feat` | new feature |
 | `fix` | bug fix |
-| `docs` | documentation only |
-| `test` | adding or updating tests |
-| `refactor` | code change, no bug fix or feature |
-| `chore` | dependency updates, config changes |
 | `perf` | performance improvement |
-| `ci` | CI/CD pipeline changes |
-| `build` | build system changes |
-| `style` | formatting changes, no logic change |
+| `refactor` | code change, no bug fix or feature |
 | `revert` | reverting a previous commit |
-
----
-
-## StrafeKit domain types
-
-| Type | When to use |
-|---|---|
-| `scan` | scanning infrastructure — nmap, masscan, gobuster wrappers and scan logic |
-| `creds` | credential management — storage, spray logic, hash handling, export |
+| `scan` | scanning infrastructure — nmap, gobuster, masscan wrappers |
+| `style` | formatting changes, no logic change |
+| `test` | adding or updating tests |
 
 ---
 
@@ -87,3 +76,5 @@ feat(db)!: migrate credential storage to SQLCipher
 BREAKING CHANGE: existing engagement databases must be re-imported.
 Run `strafekit migrate --engagement corp-pentest-05` to convert.
 ```
+```
+
