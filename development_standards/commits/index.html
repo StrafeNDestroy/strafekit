@@ -858,21 +858,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-types" class="md-nav__link">
+  <a href="#all-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Standard types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strafekit-domain-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        StrafeKit domain types
+        All types
       
     </span>
   </a>
@@ -1137,21 +1126,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-types" class="md-nav__link">
+  <a href="#all-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Standard types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strafekit-domain-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        StrafeKit domain types
+        All types
       
     </span>
   </a>
@@ -1216,18 +1194,17 @@
 Invalid messages are rejected before the commit completes.</p>
 <hr />
 <h2 id="format">Format</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>type(scope): short description
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>feat(scan): add async nmap wrapper
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fix(creds): handle duplicate domain entries
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>docs(api): add docstrings to Host model
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>test(spray): add unit tests for password spray
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>scan(nmap): add service version detection
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>creds(sqlite): add domain filtering query
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>chore(deps): update textual to latest
-</code></pre></div>
+<p>type(scope): short description
+blog(post): add infrastructure setup post
+chore(deps): update textual to latest
+creds(sqlite): add domain filtering query
+docs(api): add docstrings to Host model
+feat(scan): add async nmap wrapper
+fix(creds): handle duplicate domain entries
+scan(nmap): add service version detection
+test(spray): add unit tests for password spray</p>
 <hr />
-<h2 id="standard-types">Standard types</h2>
+<h2 id="all-types">All types</h2>
 <table>
 <thead>
 <tr>
@@ -1236,6 +1213,30 @@ Invalid messages are rejected before the commit completes.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>blog</code></td>
+<td>blog posts and writing</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>build system changes</td>
+</tr>
+<tr>
+<td><code>chore</code></td>
+<td>dependency updates, config changes</td>
+</tr>
+<tr>
+<td><code>ci</code></td>
+<td>CI/CD pipeline changes</td>
+</tr>
+<tr>
+<td><code>creds</code></td>
+<td>credential management — storage, spray logic, hash handling</td>
+</tr>
+<tr>
+<td><code>docs</code></td>
+<td>documentation only</td>
+</tr>
 <tr>
 <td><code>feat</code></td>
 <td>new feature</td>
@@ -1245,60 +1246,28 @@ Invalid messages are rejected before the commit completes.</p>
 <td>bug fix</td>
 </tr>
 <tr>
-<td><code>docs</code></td>
-<td>documentation only</td>
-</tr>
-<tr>
-<td><code>test</code></td>
-<td>adding or updating tests</td>
+<td><code>perf</code></td>
+<td>performance improvement</td>
 </tr>
 <tr>
 <td><code>refactor</code></td>
 <td>code change, no bug fix or feature</td>
 </tr>
 <tr>
-<td><code>chore</code></td>
-<td>dependency updates, config changes</td>
+<td><code>revert</code></td>
+<td>reverting a previous commit</td>
 </tr>
 <tr>
-<td><code>perf</code></td>
-<td>performance improvement</td>
-</tr>
-<tr>
-<td><code>ci</code></td>
-<td>CI/CD pipeline changes</td>
-</tr>
-<tr>
-<td><code>build</code></td>
-<td>build system changes</td>
+<td><code>scan</code></td>
+<td>scanning infrastructure — nmap, gobuster, masscan wrappers</td>
 </tr>
 <tr>
 <td><code>style</code></td>
 <td>formatting changes, no logic change</td>
 </tr>
 <tr>
-<td><code>revert</code></td>
-<td>reverting a previous commit</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="strafekit-domain-types">StrafeKit domain types</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>When to use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>scan</code></td>
-<td>scanning infrastructure — nmap, masscan, gobuster wrappers and scan logic</td>
-</tr>
-<tr>
-<td><code>creds</code></td>
-<td>credential management — storage, spray logic, hash handling, export</td>
+<td><code>test</code></td>
+<td>adding or updating tests</td>
 </tr>
 </tbody>
 </table>
@@ -1314,23 +1283,24 @@ Invalid messages are rejected before the commit completes.</p>
 <hr />
 <h2 id="multi-line-commits">Multi-line commits</h2>
 <p>For significant changes add a body explaining why:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>feat(scan): add async nmap wrapper
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Previously ServiceScan blocked the UI thread while nmap ran.
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>This wraps nmap in asyncio.create_subprocess_exec so the UI
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>stays responsive during long scans. Results stream line by line
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>into the hosts panel via message passing.
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Closes #14
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>feat(scan): add async nmap wrapper
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Previously ServiceScan blocked the UI thread while nmap ran.
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>This wraps nmap in asyncio.create_subprocess_exec so the UI
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>stays responsive during long scans. Results stream line by line
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>into the hosts panel via message passing.
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Closes #14
 </code></pre></div>
 <hr />
 <h2 id="breaking-changes">Breaking changes</h2>
 <p>Add <code>!</code> after the type and a footer:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>feat(db)!: migrate credential storage to SQLCipher
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>BREAKING CHANGE: existing engagement databases must be re-imported.
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Run `strafekit migrate --engagement corp-pentest-05` to convert.
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>feat(db)!: migrate credential storage to SQLCipher
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>BREAKING CHANGE: existing engagement databases must be re-imported.
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Run `strafekit migrate --engagement corp-pentest-05` to convert.
 </code></pre></div>
+```</p>
 
 
 
