@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/engineering/commits/">
+        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/development_standards/">
       
       
-        <link rel="prev" href="../nasa-rules/">
+        <link rel="prev" href="../architecture/hexagonal/">
       
       
-        <link rel="next" href="../workflow/">
+        <link rel="next" href="style/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Commit Standards - StrafeKit</title>
+        <title>Overview - StrafeKit</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commit-messages" class="md-skip">
+        <a href="#engineering-standards" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="StrafeKit" class="md-header__button md-logo" aria-label="StrafeKit" data-md-component="logo">
+    <a href=".." title="StrafeKit" class="md-header__button md-logo" aria-label="StrafeKit" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commit Standards
+              Overview
             
           </span>
         </div>
@@ -199,7 +199,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../blog/" class="md-tabs__link">
+      <a href="../blog/" class="md-tabs__link">
         
   
   
@@ -237,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
+      <a href="../getting-started/" class="md-tabs__link">
         
   
   
@@ -258,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../architecture/overview/" class="md-tabs__link">
+        <a href="../architecture/overview/" class="md-tabs__link">
           
   
   
@@ -280,11 +280,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../api/domain/" class="md-tabs__link">
+        <a href="../api/domain/" class="md-tabs__link">
           
   
   
@@ -334,7 +334,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="StrafeKit" class="md-nav__button md-logo" aria-label="StrafeKit" data-md-component="logo">
+    <a href=".." title="StrafeKit" class="md-nav__button md-logo" aria-label="StrafeKit" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -393,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../blog/" class="md-nav__link">
         
   
   
@@ -420,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -499,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/overview/" class="md-nav__link">
+      <a href="../architecture/overview/" class="md-nav__link">
         
   
   
@@ -527,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/hexagonal/" class="md-nav__link">
+      <a href="../architecture/hexagonal/" class="md-nav__link">
         
   
   
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -606,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -616,10 +616,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -635,6 +662,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About this project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-one-rule-that-matters-most" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The one rule that matters most
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-every-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before every commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-every-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before every push
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated enforcement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -647,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../style/" class="md-nav__link">
+      <a href="style/" class="md-nav__link">
         
   
   
@@ -675,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+      <a href="architecture/" class="md-nav__link">
         
   
   
@@ -703,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../error-handling/" class="md-nav__link">
+      <a href="error-handling/" class="md-nav__link">
         
   
   
@@ -731,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="security/" class="md-nav__link">
         
   
   
@@ -759,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nasa-rules/" class="md-nav__link">
+      <a href="nasa-rules/" class="md-nav__link">
         
   
   
@@ -784,37 +908,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Commit Standards
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="commits/" class="md-nav__link">
         
   
   
@@ -830,92 +927,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Format
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#standard-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Standard types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strafekit-domain-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        StrafeKit domain types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-line-commits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-line commits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Breaking changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -928,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
+      <a href="workflow/" class="md-nav__link">
         
   
   
@@ -1015,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/domain/" class="md-nav__link">
+      <a href="../api/domain/" class="md-nav__link">
         
   
   
@@ -1043,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/ports/" class="md-nav__link">
+      <a href="../api/ports/" class="md-nav__link">
         
   
   
@@ -1071,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/adapters/" class="md-nav__link">
+      <a href="../api/adapters/" class="md-nav__link">
         
   
   
@@ -1126,10 +1137,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#format" class="md-nav__link">
+  <a href="#about-this-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Format
+        About this project
       
     </span>
   </a>
@@ -1137,10 +1148,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-types" class="md-nav__link">
+  <a href="#quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Standard types
+        Quick reference
       
     </span>
   </a>
@@ -1148,10 +1159,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strafekit-domain-types" class="md-nav__link">
+  <a href="#the-one-rule-that-matters-most" class="md-nav__link">
     <span class="md-ellipsis">
       
-        StrafeKit domain types
+        The one rule that matters most
       
     </span>
   </a>
@@ -1159,10 +1170,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
+  <a href="#before-every-commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rules
+        Before every commit
       
     </span>
   </a>
@@ -1170,10 +1181,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-line-commits" class="md-nav__link">
+  <a href="#before-every-push" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-line commits
+        Before every push
       
     </span>
   </a>
@@ -1181,10 +1192,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
+  <a href="#automated-enforcement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Breaking changes
+        Automated enforcement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Philosophy
       
     </span>
   </a>
@@ -1211,126 +1233,125 @@
   
 
 
-<h1 id="commit-messages">Commit Messages<a class="headerlink" href="#commit-messages" title="Permanent link">&para;</a></h1>
-<p>Conventional commits format enforced automatically by commitizen.
-Invalid messages are rejected before the commit completes.</p>
-<hr />
-<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>type(scope): short description
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>feat(scan): add async nmap wrapper
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fix(creds): handle duplicate domain entries
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>docs(api): add docstrings to Host model
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>test(spray): add unit tests for password spray
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>scan(nmap): add service version detection
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>creds(sqlite): add domain filtering query
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>chore(deps): update textual to latest
-</code></pre></div>
-<hr />
-<h2 id="standard-types">Standard types<a class="headerlink" href="#standard-types" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>When to use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>feat</code></td>
-<td>new feature</td>
-</tr>
-<tr>
-<td><code>fix</code></td>
-<td>bug fix</td>
-</tr>
-<tr>
-<td><code>docs</code></td>
-<td>documentation only</td>
-</tr>
-<tr>
-<td><code>test</code></td>
-<td>adding or updating tests</td>
-</tr>
-<tr>
-<td><code>refactor</code></td>
-<td>code change, no bug fix or feature</td>
-</tr>
-<tr>
-<td><code>chore</code></td>
-<td>dependency updates, config changes</td>
-</tr>
-<tr>
-<td><code>perf</code></td>
-<td>performance improvement</td>
-</tr>
-<tr>
-<td><code>ci</code></td>
-<td>CI/CD pipeline changes</td>
-</tr>
-<tr>
-<td><code>build</code></td>
-<td>build system changes</td>
-</tr>
-<tr>
-<td><code>style</code></td>
-<td>formatting changes, no logic change</td>
-</tr>
-<tr>
-<td><code>revert</code></td>
-<td>reverting a previous commit</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="strafekit-domain-types">StrafeKit domain types<a class="headerlink" href="#strafekit-domain-types" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>When to use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>scan</code></td>
-<td>scanning infrastructure — nmap, masscan, gobuster wrappers and scan logic</td>
-</tr>
-<tr>
-<td><code>creds</code></td>
-<td>credential management — storage, spray logic, hash handling, export</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
+<h1 id="engineering-standards">Engineering Standards</h1>
+<p><img alt="CI" src="https://github.com/StrafeNDestroy/strafekit/actions/workflows/ci.yml/badge.svg" />
+<img alt="Python" src="https://img.shields.io/badge/python-3.12+-blue" />
+<img alt="License" src="https://img.shields.io/badge/license-MIT-green" />
+<img alt="Platform" src="https://img.shields.io/badge/platform-linux-lightgrey" />
+<img alt="Status" src="https://img.shields.io/badge/status-active_development-orange" /></p>
+<p>This section documents the technical decisions, architecture patterns,
+and development standards used in StrafeKit.</p>
+<p>Written as a reference for the project and as a demonstration of
+professional Python development practices.</p>
+<h2 id="about-this-project">About this project</h2>
+<p>StrafeKit is an active development project built to demonstrate
+professional Python engineering practices:</p>
 <ul>
-<li>Type is required</li>
-<li>Scope is optional but recommended — use the component name</li>
-<li>Description is required, lowercase, no period at end</li>
-<li>No ticket numbers in the message — use the commit body for that</li>
-<li>Keep description under 72 characters</li>
+<li>Hexagonal architecture with clean separation of concerns</li>
+<li>Full CI/CD pipeline with automated quality checks</li>
+<li>Test driven development with pytest</li>
+<li>Type safe Python with mypy strict mode</li>
+<li>Security focused development with bandit</li>
+<li>NASA Power of 10 coding standards</li>
 </ul>
 <hr />
-<h2 id="multi-line-commits">Multi-line commits<a class="headerlink" href="#multi-line-commits" title="Permanent link">&para;</a></h2>
-<p>For significant changes add a body explaining why:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>feat(scan): add async nmap wrapper
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Previously ServiceScan blocked the UI thread while nmap ran.
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>This wraps nmap in asyncio.create_subprocess_exec so the UI
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>stays responsive during long scans. Results stream line by line
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>into the hosts panel via message passing.
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Closes #14
+<h2 id="quick-reference">Quick reference</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Naming, types, docstrings, comments</td>
+<td><a href="style/">Style Guide</a></td>
+</tr>
+<tr>
+<td>Hexagonal architecture rules</td>
+<td><a href="architecture/">Architecture Rules</a></td>
+</tr>
+<tr>
+<td>Exception patterns and error handling</td>
+<td><a href="error-handling/">Error Handling</a></td>
+</tr>
+<tr>
+<td>Security requirements</td>
+<td><a href="security/">Security Rules</a></td>
+</tr>
+<tr>
+<td>NASA Power of 10 coding standards</td>
+<td><a href="nasa-rules/">NASA Rules</a></td>
+</tr>
+<tr>
+<td>Commit message format</td>
+<td><a href="commits/">Commit Messages</a></td>
+</tr>
+<tr>
+<td>Daily development workflow</td>
+<td><a href="workflow/">Workflow</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-one-rule-that-matters-most">The one rule that matters most</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>core/        NEVER imports from adapters/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>adapters/    MAY import from core/
+</code></pre></div>
+<p>If you break this rule the architecture collapses. Everything else is style.</p>
+<hr />
+<h2 id="before-every-commit">Before every commit</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>make<span class="w"> </span>lint
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>make<span class="w"> </span>type-check
+</code></pre></div>
+<h2 id="before-every-push">Before every push</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>make<span class="w"> </span>check
 </code></pre></div>
 <hr />
-<h2 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
-<p>Add <code>!</code> after the type and a footer:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>feat(db)!: migrate credential storage to SQLCipher
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>BREAKING CHANGE: existing engagement databases must be re-imported.
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Run `strafekit migrate --engagement corp-pentest-05` to convert.
-</code></pre></div>
+<h2 id="automated-enforcement">Automated enforcement</h2>
+<p>These run automatically — you cannot commit code that violates them:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Enforces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ruff</td>
+<td>linting and formatting</td>
+</tr>
+<tr>
+<td>mypy</td>
+<td>type checking</td>
+</tr>
+<tr>
+<td>bandit</td>
+<td>security scanning</td>
+</tr>
+<tr>
+<td>commitizen</td>
+<td>commit message format</td>
+</tr>
+<tr>
+<td>pre-commit</td>
+<td>runs all of the above on every commit</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="philosophy">Philosophy</h2>
+<p>Inspired by systems programming clarity and NASA/JPL Power of 10 standards.
+Built for security professionals who need reliable, readable, maintainable tooling.</p>
+<ul>
+<li>Code should read like documentation</li>
+<li>Prefer explicit over implicit</li>
+<li>If it is not obvious why — explain it in a comment</li>
+<li>Reliability over cleverness</li>
+<li>A junior developer should be able to read any function and understand it</li>
+</ul>
 
 
 
@@ -1386,10 +1407,10 @@ Invalid messages are rejected before the commit completes.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

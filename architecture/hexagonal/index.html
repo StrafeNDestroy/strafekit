@@ -16,7 +16,7 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../../engineering/">
+        <link rel="next" href="../../development_standards/">
       
       
         
@@ -280,11 +280,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../engineering/" class="md-tabs__link">
+        <a href="../../development_standards/" class="md-tabs__link">
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -803,7 +803,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -819,7 +819,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -832,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/" class="md-nav__link">
+      <a href="../../development_standards/" class="md-nav__link">
         
   
   
@@ -860,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/style/" class="md-nav__link">
+      <a href="../../development_standards/style/" class="md-nav__link">
         
   
   
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/architecture/" class="md-nav__link">
+      <a href="../../development_standards/architecture/" class="md-nav__link">
         
   
   
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/error-handling/" class="md-nav__link">
+      <a href="../../development_standards/error-handling/" class="md-nav__link">
         
   
   
@@ -944,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/security/" class="md-nav__link">
+      <a href="../../development_standards/security/" class="md-nav__link">
         
   
   
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/nasa-rules/" class="md-nav__link">
+      <a href="../../development_standards/nasa-rules/" class="md-nav__link">
         
   
   
@@ -1000,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/commits/" class="md-nav__link">
+      <a href="../../development_standards/commits/" class="md-nav__link">
         
   
   
@@ -1028,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/workflow/" class="md-nav__link">
+      <a href="../../development_standards/workflow/" class="md-nav__link">
         
   
   
@@ -1411,11 +1411,11 @@
   
 
 
-<h1 id="hexagonal-architecture">Hexagonal Architecture<a class="headerlink" href="#hexagonal-architecture" title="Permanent link">&para;</a></h1>
+<h1 id="hexagonal-architecture">Hexagonal Architecture</h1>
 <p>StrafeKit is built on hexagonal architecture — also known as Ports and Adapters.
 This page explains the pattern, why it was chosen, and how it maps to the codebase.</p>
 <hr />
-<h2 id="the-core-problem-it-solves">The core problem it solves<a class="headerlink" href="#the-core-problem-it-solves" title="Permanent link">&para;</a></h2>
+<h2 id="the-core-problem-it-solves">The core problem it solves</h2>
 <p>In a traditional layered application business logic gets tangled with infrastructure.
 The scan service calls subprocess directly. The credential service reads files directly.
 Testing requires a real database, real tools, real network.</p>
@@ -1427,7 +1427,7 @@ Testing requires a real database, real tools, real network.</p>
 The outside world connects through implementations called adapters.
 Dependencies always point inward — never outward.</p>
 <hr />
-<h2 id="the-dependency-rule">The dependency rule<a class="headerlink" href="#the-dependency-rule" title="Permanent link">&para;</a></h2>
+<h2 id="the-dependency-rule">The dependency rule</h2>
 <p>This is the single most important rule in the architecture.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>core/        NEVER imports from adapters/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>adapters/    MAY import from core/
@@ -1436,7 +1436,7 @@ Dependencies always point inward — never outward.</p>
 <p>If you find an import from <code>adapters</code> inside <code>core</code> — that is a violation.
 Redesign the interface so core defines what it needs as a port.</p>
 <hr />
-<h2 id="current-folder-structure">Current folder structure<a class="headerlink" href="#current-folder-structure" title="Permanent link">&para;</a></h2>
+<h2 id="current-folder-structure">Current folder structure</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>strafekit/
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>│
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── core/                        ← knows nothing about outside world
@@ -1452,8 +1452,8 @@ Redesign the interface so core defines what it needs as a port.</p>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    └── driving/                 ← UI, CLI (coming)
 </code></pre></div>
 <hr />
-<h2 id="the-three-layers-of-core">The three layers of core<a class="headerlink" href="#the-three-layers-of-core" title="Permanent link">&para;</a></h2>
-<h3 id="domain-models-the-nouns">Domain models — the nouns<a class="headerlink" href="#domain-models-the-nouns" title="Permanent link">&para;</a></h3>
+<h2 id="the-three-layers-of-core">The three layers of core</h2>
+<h3 id="domain-models-the-nouns">Domain models — the nouns</h3>
 <p>Pure data containers. No business logic. No external imports.
 Represent the concepts in the problem domain.</p>
 <p>Currently built:</p>
@@ -1474,7 +1474,7 @@ Represent the concepts in the problem domain.</p>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">CRITICAL</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 </code></pre></div>
 <p>Coming next — dataclass models for <code>Host</code>, <code>Credential</code>, <code>Finding</code>, <code>Engagement</code>.</p>
-<h3 id="ports-the-contracts-coming">Ports — the contracts (coming)<a class="headerlink" href="#ports-the-contracts-coming" title="Permanent link">&para;</a></h3>
+<h3 id="ports-the-contracts-coming">Ports — the contracts (coming)</h3>
 <p>Interfaces defined as Python Protocols. The core declares what it needs
 from the outside world without knowing how it will be provided.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># example of what a port will look like</span>
@@ -1482,22 +1482,22 @@ from the outside world without knowing how it will be provided.</p>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">credential</span><span class="p">:</span> <span class="n">Credential</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> <span class="o">...</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">find_by_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Credential</span><span class="p">]:</span> <span class="o">...</span>
 </code></pre></div>
-<h3 id="services-the-verbs-coming">Services — the verbs (coming)<a class="headerlink" href="#services-the-verbs-coming" title="Permanent link">&para;</a></h3>
+<h3 id="services-the-verbs-coming">Services — the verbs (coming)</h3>
 <p>Business logic. Orchestrates domain models using ports.
 Never touches infrastructure directly.</p>
 <hr />
-<h2 id="the-two-sides-of-the-hexagon">The two sides of the hexagon<a class="headerlink" href="#the-two-sides-of-the-hexagon" title="Permanent link">&para;</a></h2>
-<h3 id="driving-adapters-things-that-call-the-core-coming">Driving adapters — things that call the core (coming)<a class="headerlink" href="#driving-adapters-things-that-call-the-core-coming" title="Permanent link">&para;</a></h3>
+<h2 id="the-two-sides-of-the-hexagon">The two sides of the hexagon</h2>
+<h3 id="driving-adapters-things-that-call-the-core-coming">Driving adapters — things that call the core (coming)</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>adapters/driving/tui/      Textual terminal UI
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>adapters/driving/cli/      Command line interface
 </code></pre></div>
-<h3 id="driven-adapters-things-the-core-calls-coming">Driven adapters — things the core calls (coming)<a class="headerlink" href="#driven-adapters-things-the-core-calls-coming" title="Permanent link">&para;</a></h3>
+<h3 id="driven-adapters-things-the-core-calls-coming">Driven adapters — things the core calls (coming)</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>adapters/driven/db/        SQLite repositories
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>adapters/driven/tools/     nmap, gobuster, nxc wrappers
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>adapters/driven/secrets/   OS keyring integration
 </code></pre></div>
 <hr />
-<h2 id="why-this-matters-for-testing">Why this matters for testing<a class="headerlink" href="#why-this-matters-for-testing" title="Permanent link">&para;</a></h2>
+<h2 id="why-this-matters-for-testing">Why this matters for testing</h2>
 <p>The architecture makes testing trivial. The core has no external dependencies.
 Tests replace real adapters with in-memory fakes.</p>
 <p>No database required. No tools installed. No network. Pure Python objects.</p>
@@ -1512,7 +1512,7 @@ Tests replace real adapters with in-memory fakes.</p>
 <p>As domain models and services are built — tests remain this simple.
 The architecture enforces it.</p>
 <hr />
-<h2 id="exception-hierarchy">Exception hierarchy<a class="headerlink" href="#exception-hierarchy" title="Permanent link">&para;</a></h2>
+<h2 id="exception-hierarchy">Exception hierarchy</h2>
 <p>The first real pattern in the codebase — the exception hierarchy follows
 the same principle. <code>StrafekitError</code> is the core base. Everything inherits from it.
 Callers catch at whatever level makes sense.</p>
@@ -1525,7 +1525,7 @@ Callers catch at whatever level makes sense.</p>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">InvalidFieldError</span><span class="p">(</span><span class="n">ValidationError</span><span class="p">):</span> <span class="k">pass</span>   <span class="c1"># most specific</span>
 </code></pre></div>
 <hr />
-<h2 id="design-decisions">Design decisions<a class="headerlink" href="#design-decisions" title="Permanent link">&para;</a></h2>
+<h2 id="design-decisions">Design decisions</h2>
 <p><strong>Why hexagonal over layered architecture?</strong>
 StrafeKit wraps external tools — nmap, gobuster, nxc. Those tools change.
 Versions differ between machines. New tools get added. Hexagonal means
@@ -1539,7 +1539,7 @@ Domain models are pure data. Dataclasses generate <code>__init__</code>, <code>_
 and <code>__eq__</code> automatically. <code>frozen=True</code> makes them immutable where appropriate.
 No boilerplate, full type safety.</p>
 <hr />
-<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<h2 id="further-reading">Further reading</h2>
 <ul>
 <li>Original paper by Alistair Cockburn: https://alistair.cockburn.us/hexagonal-architecture</li>
 <li>Clean Architecture by Robert Martin — same concept, different framing</li>

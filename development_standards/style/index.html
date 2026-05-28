@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/engineering/architecture/">
+        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/development_standards/style/">
       
       
-        <link rel="prev" href="../style/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../error-handling/">
+        <link rel="next" href="../architecture/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Architecture Rules - StrafeKit</title>
+        <title>Style Guide - StrafeKit</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture-rules" class="md-skip">
+        <a href="#style-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture Rules
+              Style Guide
             
           </span>
         </div>
@@ -284,7 +284,7 @@
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -606,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -644,34 +644,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../style/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Style Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -691,7 +663,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture Rules
+    Style Guide
   
 
     
@@ -709,7 +681,7 @@
   <span class="md-ellipsis">
     
   
-    Architecture Rules
+    Style Guide
   
 
     
@@ -735,10 +707,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-dependency-rule" class="md-nav__link">
+  <a href="#naming-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The dependency rule
+        Naming conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type annotations
       
     </span>
   </a>
@@ -746,10 +746,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-three-layers" class="md-nav__link">
+  <a href="#docstrings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three layers
+        Docstrings
       
     </span>
   </a>
@@ -757,10 +757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subprocess-calls" class="md-nav__link">
+  <a href="#comments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subprocess calls
+        Comments
       
     </span>
   </a>
@@ -768,10 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nouns-vs-verbs" class="md-nav__link">
+  <a href="#import-ordering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nouns vs verbs
+        Import ordering
       
     </span>
   </a>
@@ -779,10 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-and-path-operations" class="md-nav__link">
+  <a href="#function-length" class="md-nav__link">
     <span class="md-ellipsis">
       
-        File and path operations
+        Function length
       
     </span>
   </a>
@@ -793,6 +793,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1115,10 +1143,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-dependency-rule" class="md-nav__link">
+  <a href="#naming-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The dependency rule
+        Naming conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type annotations
       
     </span>
   </a>
@@ -1126,10 +1182,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-three-layers" class="md-nav__link">
+  <a href="#docstrings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three layers
+        Docstrings
       
     </span>
   </a>
@@ -1137,10 +1193,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subprocess-calls" class="md-nav__link">
+  <a href="#comments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subprocess calls
+        Comments
       
     </span>
   </a>
@@ -1148,10 +1204,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nouns-vs-verbs" class="md-nav__link">
+  <a href="#import-ordering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nouns vs verbs
+        Import ordering
       
     </span>
   </a>
@@ -1159,10 +1215,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-and-path-operations" class="md-nav__link">
+  <a href="#function-length" class="md-nav__link">
     <span class="md-ellipsis">
       
-        File and path operations
+        Function length
       
     </span>
   </a>
@@ -1189,123 +1245,174 @@
   
 
 
-<h1 id="architecture-rules">Architecture Rules<a class="headerlink" href="#architecture-rules" title="Permanent link">&para;</a></h1>
-<p>The hexagonal architecture dependency rule is the most important rule in this codebase.
-Breaking it collapses the separation between business logic and infrastructure.</p>
+<h1 id="style-guide">Style Guide</h1>
+<p>Automated enforcement via ruff and mypy.
+Run <code>make lint</code> before committing.</p>
 <hr />
-<h2 id="the-dependency-rule">The dependency rule<a class="headerlink" href="#the-dependency-rule" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>core/        NEVER imports from adapters/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>adapters/    MAY import from core/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>tests/       MAY import from anywhere
-</code></pre></div>
-<p>Dependencies point inward — toward the core. Never outward.</p>
-<p>If you find yourself importing from <code>adapters</code> inside <code>core</code> — stop.
-Redesign the interface so the core defines what it needs as a port.</p>
-<hr />
-<h2 id="the-three-layers">The three layers<a class="headerlink" href="#the-three-layers" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>driving adapters    →    core    ←    driven adapters
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>(Textual, CLI)           ↑            (SQLite, nmap, gobuster)
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                         │
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                      ports
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                    (interfaces / Protocols)
-</code></pre></div>
+<h2 id="naming-conventions">Naming conventions</h2>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
-<th>Location</th>
-<th>Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Domain models</td>
-<td><code>core/domain/</code></td>
-<td>Pure data, no external imports</td>
-</tr>
-<tr>
-<td>Ports</td>
-<td><code>core/ports/</code></td>
-<td>Protocols defining contracts</td>
-</tr>
-<tr>
-<td>Services</td>
-<td><code>core/services/</code></td>
-<td>Business logic, imports ports only</td>
-</tr>
-<tr>
-<td>Driven adapters</td>
-<td><code>adapters/driven/</code></td>
-<td>Implements ports — database, tools</td>
-</tr>
-<tr>
-<td>Driving adapters</td>
-<td><code>adapters/driving/</code></td>
-<td>Calls services — UI, CLI</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="subprocess-calls">Subprocess calls<a class="headerlink" href="#subprocess-calls" title="Permanent link">&para;</a></h2>
-<p>All external tool execution must go through the adapter layer.
-Never call subprocess directly from core code.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># wrong — subprocess in core logic</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">ScanService</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">:</span> <span class="n">Host</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ScanResult</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;nmap&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="p">])</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># right — core calls port, adapter handles subprocess</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">ScanService</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">executor</span><span class="p">:</span> <span class="n">ScanExecutor</span><span class="p">):</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">executor</span> <span class="o">=</span> <span class="n">executor</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">:</span> <span class="n">Host</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ScanResult</span><span class="p">:</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">run_nmap</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-</code></pre></div>
-<hr />
-<h2 id="nouns-vs-verbs">Nouns vs verbs<a class="headerlink" href="#nouns-vs-verbs" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Noun → dataclass       holds data, validates, compares
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Verb → regular class   performs operations, contains logic
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Location</th>
-<th>Type</th>
+<th>Element</th>
+<th>Style</th>
 <th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>core/domain/</code></td>
-<td>dataclass</td>
-<td><code>Host</code>, <code>Credential</code>, <code>Finding</code></td>
+<td>Classes</td>
+<td>PascalCase</td>
+<td><code>CredentialRepository</code></td>
 </tr>
 <tr>
-<td><code>core/services/</code></td>
-<td>regular class</td>
-<td><code>ScanService</code>, <code>SprayService</code></td>
+<td>Functions</td>
+<td>snake_case</td>
+<td><code>scan_host()</code></td>
 </tr>
 <tr>
-<td><code>core/ports/</code></td>
-<td>Protocol</td>
-<td><code>ScanExecutor</code>, <code>CredentialRepository</code></td>
+<td>Constants</td>
+<td>UPPER_SNAKE</td>
+<td><code>DEFAULT_TIMEOUT</code></td>
 </tr>
 <tr>
-<td><code>adapters/</code></td>
-<td>regular class</td>
-<td><code>NmapExecutor</code>, <code>SQLiteRepository</code></td>
+<td>Private</td>
+<td>leading underscore</td>
+<td><code>_internal_helper()</code></td>
+</tr>
+<tr>
+<td>Modules</td>
+<td>snake_case</td>
+<td><code>scan_service.py</code></td>
+</tr>
+<tr>
+<td>Packages</td>
+<td>snake_case</td>
+<td><code>core/</code></td>
+</tr>
+<tr>
+<td>Type aliases</td>
+<td>PascalCase</td>
+<td><code>IPAddress = str</code></td>
+</tr>
+<tr>
+<td>Protocols</td>
+<td>PascalCase</td>
+<td><code>ScanExecutor</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="naming-philosophy">Naming philosophy</h3>
+<ul>
+<li>Names should be self-documenting</li>
+<li>Avoid abbreviations unless universally understood (ip, url, db, id)</li>
+<li>Boolean variables and functions should read as questions</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># wrong</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">check</span> <span class="o">=</span> <span class="n">is_valid</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># right</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">is_alive</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">is_valid</span> <span class="o">=</span> <span class="n">validate_host</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+</code></pre></div>
 <hr />
-<h2 id="file-and-path-operations">File and path operations<a class="headerlink" href="#file-and-path-operations" title="Permanent link">&para;</a></h2>
-<p>Always use <code>pathlib.Path</code> — never string concatenation.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># wrong</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/home/user/engagements/&quot;</span> <span class="o">+</span> <span class="n">engagement_name</span> <span class="o">+</span> <span class="s2">&quot;/results.txt&quot;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># right</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home/user/engagements&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">engagement_name</span> <span class="o">/</span> <span class="s2">&quot;results.txt&quot;</span>
+<h2 id="type-annotations">Type annotations</h2>
+<ul>
+<li>Every function must have complete type annotations</li>
+<li>No untyped parameters, no untyped return values</li>
+<li>Use Python 3.12 syntax — not the old typing module forms</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># wrong — old style</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">scan</span><span class="p">(</span><span class="n">hosts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="o">...</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># right — Python 3.12 style</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">scan</span><span class="p">(</span><span class="n">hosts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="o">...</span>
+</code></pre></div>
+<p>Use <code>TypeAlias</code> for semantic clarity:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">IPAddress</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">str</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">Port</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">int</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">Domain</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="nb">str</span>
+</code></pre></div>
+<hr />
+<h2 id="docstrings">Docstrings</h2>
+<p>Every public module, class, and function requires a docstring.
+Google style docstrings throughout.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">scan_host</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="n">Host</span><span class="p">,</span> <span class="n">ports</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;top-1000&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ScanResult</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Scan a single host for open ports and running services.</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="sd">    Executes nmap against the target host and parses the results</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sd">    into a structured ScanResult. Uses the configured scan profile</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="sd">    from AppConfig.</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="sd">    Args:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="sd">        host: The target host to scan. Must have a valid IP address.</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="sd">        ports: Port specification in nmap format. Defaults to top 1000.</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="sd">        ScanResult containing all discovered ports and services.</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="sd">        ScanError: If nmap is not installed or exits with non-zero status.</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="sd">        TimeoutError: If the scan exceeds the configured timeout.</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="sd">    Example:</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="sd">        &gt;&gt;&gt; result = scan_host(Host(ip=&quot;10.10.10.5&quot;), ports=&quot;22,80,443&quot;)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="sd">        &gt;&gt;&gt; print(result.open_ports)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="sd">        [22, 80, 443]</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Explain WHY not WHAT</li>
+<li>Code explains what — comments explain intent and reasoning</li>
+<li>Every non-obvious decision needs a comment</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># wrong — explains what, code already shows that</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># loop through hosts</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="n">hosts</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">scan</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># right — explains why</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># scan in serial not parallel here — target network has IDS</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># that triggers on concurrent port scans from single source</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="n">hosts</span><span class="p">:</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">scan</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="import-ordering">Import ordering</h2>
+<p>Ruff enforces this automatically. For reference:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 1. stdlib</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># 2. third party</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlalchemy</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">textual.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">App</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># 3. local</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">strafekit.core.domain.host</span><span class="w"> </span><span class="kn">import</span> <span class="n">Host</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">strafekit.core.ports.scan_executor</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScanExecutor</span>
+</code></pre></div>
+<hr />
+<h2 id="function-length">Function length</h2>
+<ul>
+<li>Aim for under 30 lines — ideal, no questions asked</li>
+<li>30 to 60 lines — acceptable, question whether it can be split</li>
+<li>Over 60 lines — NASA hard limit, requires explicit justification comment</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># if you must exceed 60 lines, say why</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">build_engagement_report</span><span class="p">(</span><span class="n">engagement</span><span class="p">:</span> <span class="n">Engagement</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="c1"># NOTE: exceeds 30 line guideline because report generation requires</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="c1"># assembling all sections in sequence. Splitting would obscure the</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="c1"># report structure. Each section is a single responsibility.</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="o">...</span>
 </code></pre></div>
 
 

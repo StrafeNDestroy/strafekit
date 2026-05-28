@@ -280,11 +280,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../engineering/" class="md-tabs__link">
+        <a href="../../development_standards/" class="md-tabs__link">
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -770,7 +770,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -786,7 +786,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -799,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/" class="md-nav__link">
+      <a href="../../development_standards/" class="md-nav__link">
         
   
   
@@ -827,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/style/" class="md-nav__link">
+      <a href="../../development_standards/style/" class="md-nav__link">
         
   
   
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/architecture/" class="md-nav__link">
+      <a href="../../development_standards/architecture/" class="md-nav__link">
         
   
   
@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/error-handling/" class="md-nav__link">
+      <a href="../../development_standards/error-handling/" class="md-nav__link">
         
   
   
@@ -911,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/security/" class="md-nav__link">
+      <a href="../../development_standards/security/" class="md-nav__link">
         
   
   
@@ -939,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/nasa-rules/" class="md-nav__link">
+      <a href="../../development_standards/nasa-rules/" class="md-nav__link">
         
   
   
@@ -967,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/commits/" class="md-nav__link">
+      <a href="../../development_standards/commits/" class="md-nav__link">
         
   
   
@@ -995,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engineering/workflow/" class="md-nav__link">
+      <a href="../../development_standards/workflow/" class="md-nav__link">
         
   
   
@@ -1345,11 +1345,11 @@
   
 
 
-<h1 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h1>
+<h1 id="architecture-overview">Architecture Overview</h1>
 <p>StrafeKit is designed as a local penetration testing platform.
 This page covers the high level architectural decisions and why they were made.</p>
 <hr />
-<h2 id="what-strafekit-is">What StrafeKit is<a class="headerlink" href="#what-strafekit-is" title="Permanent link">&para;</a></h2>
+<h2 id="what-strafekit-is">What StrafeKit is</h2>
 <p>A local tool that runs on your attack box during an engagement.
 It integrates third party security tools into a single terminal UI,
 manages engagement state, tracks credentials, and organizes findings.</p>
@@ -1363,13 +1363,13 @@ manages engagement state, tracks credentials, and organizes findings.</p>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    Findings tracker
 </code></pre></div>
 <hr />
-<h2 id="core-architectural-decisions">Core architectural decisions<a class="headerlink" href="#core-architectural-decisions" title="Permanent link">&para;</a></h2>
-<h3 id="hexagonal-architecture">Hexagonal architecture<a class="headerlink" href="#hexagonal-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="core-architectural-decisions">Core architectural decisions</h2>
+<h3 id="hexagonal-architecture">Hexagonal architecture</h3>
 <p>The codebase is organized around hexagonal architecture — also called
 Ports and Adapters. Business logic lives in the core and knows nothing
 about databases, tools, or the UI. See <a href="../hexagonal/">Hexagonal Architecture</a>
 for the full explanation.</p>
-<h3 id="terminal-ui-textual">Terminal UI — Textual<a class="headerlink" href="#terminal-ui-textual" title="Permanent link">&para;</a></h3>
+<h3 id="terminal-ui-textual">Terminal UI — Textual</h3>
 <p>StrafeKit runs entirely in the terminal. No browser, no separate server,
 no Java runtime. Built with Textual — a Python TUI framework built on asyncio.</p>
 <p>Why terminal:
@@ -1377,7 +1377,7 @@ no Java runtime. Built with Textual — a Python TUI framework built on asyncio.
 - No separate window to manage during an engagement
 - Keyboard driven — faster than mouse during active testing
 - Single process — scans, results, and UI in one place</p>
-<h3 id="sqlite-for-storage">SQLite for storage<a class="headerlink" href="#sqlite-for-storage" title="Permanent link">&para;</a></h3>
+<h3 id="sqlite-for-storage">SQLite for storage</h3>
 <p>Engagement data lives in a SQLite database — one file per engagement.
 Portable, queryable, no server process required.</p>
 <p>Why SQLite over PostgreSQL:
@@ -1385,7 +1385,7 @@ Portable, queryable, no server process required.</p>
 - One file = easy to backup, archive, or hand off
 - Built into Python — no installation required
 - Handles the write frequency of a pentest engagement comfortably</p>
-<h3 id="asyncio-for-concurrency">asyncio for concurrency<a class="headerlink" href="#asyncio-for-concurrency" title="Permanent link">&para;</a></h3>
+<h3 id="asyncio-for-concurrency">asyncio for concurrency</h3>
 <p>Multiple scans run simultaneously without blocking the UI.
 Textual is built on asyncio — scan workers post messages to the UI
 through an event queue. The UI reacts when data arrives.</p>
@@ -1394,17 +1394,17 @@ through an event queue. The UI reacts when data arrives.</p>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>spray worker    → message queue → Creds panel
 </code></pre></div>
 <hr />
-<h2 id="current-state">Current state<a class="headerlink" href="#current-state" title="Permanent link">&para;</a></h2>
+<h2 id="current-state">Current state</h2>
 <p>StrafeKit is in active development. This documents what is built
 and what is planned.</p>
-<h3 id="built">Built<a class="headerlink" href="#built" title="Permanent link">&para;</a></h3>
+<h3 id="built">Built</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>✅ Project infrastructure     pyproject.toml, uv, Makefile
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>✅ CI/CD pipeline             GitHub Actions — lint, type check, test
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>✅ Documentation site         MkDocs Material hosted on GitHub Pages
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>✅ Domain enums               HostStatus, VulnerabilitySeverity, etc
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>✅ Exception hierarchy        StrafekitError and all children
 </code></pre></div>
-<h3 id="in-progress">In progress<a class="headerlink" href="#in-progress" title="Permanent link">&para;</a></h3>
+<h3 id="in-progress">In progress</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>🔧 Domain models              Host, Credential, Finding, Engagement
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>🔧 Ports                      CredentialRepository, ScanExecutor
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>🔧 Services                   ScanService, SprayService
@@ -1412,7 +1412,7 @@ and what is planned.</p>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>🔧 Driving adapters           Textual UI, CLI
 </code></pre></div>
 <hr />
-<h2 id="technology-stack">Technology stack<a class="headerlink" href="#technology-stack" title="Permanent link">&para;</a></h2>
+<h2 id="technology-stack">Technology stack</h2>
 <table>
 <thead>
 <tr>
@@ -1485,7 +1485,7 @@ and what is planned.</p>
 </tbody>
 </table>
 <hr />
-<h2 id="design-principles">Design principles<a class="headerlink" href="#design-principles" title="Permanent link">&para;</a></h2>
+<h2 id="design-principles">Design principles</h2>
 <p>These principles guide every decision in the codebase.</p>
 <p><strong>Reliability over cleverness</strong> — code that is easy to read and reason
 about is more valuable than clever one-liners during an engagement.</p>

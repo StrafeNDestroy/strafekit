@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/engineering/nasa-rules/">
+        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/development_standards/nasa-rules/">
       
       
         <link rel="prev" href="../security/">
@@ -284,7 +284,7 @@
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -606,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -1299,13 +1299,13 @@
   
 
 
-<h1 id="nasa-power-of-10-rules">NASA Power of 10 Rules<a class="headerlink" href="#nasa-power-of-10-rules" title="Permanent link">&para;</a></h1>
+<h1 id="nasa-power-of-10-rules">NASA Power of 10 Rules</h1>
 <p>Originally written by Gerard Holzmann at NASA/JPL for safety-critical systems.
 Adapted here for Python and security tooling.</p>
 <p>These rules exist because the cost of failure matters.
 For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <hr />
-<h2 id="rule-1-simple-control-flow">Rule 1 — Simple control flow<a class="headerlink" href="#rule-1-simple-control-flow" title="Permanent link">&para;</a></h2>
+<h2 id="rule-1-simple-control-flow">Rule 1 — Simple control flow</h2>
 <ul>
 <li>No deeply nested conditions — maximum 2 levels before extracting a function</li>
 <li>Prefer early returns over nested if/else</li>
@@ -1334,7 +1334,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            <span class="n">report</span><span class="p">(</span><span class="n">service</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-2-bounded-loops">Rule 2 — Bounded loops<a class="headerlink" href="#rule-2-bounded-loops" title="Permanent link">&para;</a></h2>
+<h2 id="rule-2-bounded-loops">Rule 2 — Bounded loops</h2>
 <ul>
 <li>All loops over external or user-supplied data must have a maximum iteration bound</li>
 <li>Unbounded loops over network data are never acceptable</li>
@@ -1353,7 +1353,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">scan</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-3-no-dynamic-allocation-in-hot-paths">Rule 3 — No dynamic allocation in hot paths<a class="headerlink" href="#rule-3-no-dynamic-allocation-in-hot-paths" title="Permanent link">&para;</a></h2>
+<h2 id="rule-3-no-dynamic-allocation-in-hot-paths">Rule 3 — No dynamic allocation in hot paths</h2>
 <ul>
 <li>Initialize data structures at startup, not inside loops</li>
 <li>Pre-allocate result containers before scanning begins</li>
@@ -1374,7 +1374,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="k">return</span> <span class="n">results</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-4-function-length">Rule 4 — Function length<a class="headerlink" href="#rule-4-function-length" title="Permanent link">&para;</a></h2>
+<h2 id="rule-4-function-length">Rule 4 — Function length</h2>
 <ul>
 <li>Aim for under 30 lines — ideal, no questions asked</li>
 <li>30 to 60 lines — acceptable, question whether it can be split</li>
@@ -1389,7 +1389,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="o">...</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-5-assertions-and-validation">Rule 5 — Assertions and validation<a class="headerlink" href="#rule-5-assertions-and-validation" title="Permanent link">&para;</a></h2>
+<h2 id="rule-5-assertions-and-validation">Rule 5 — Assertions and validation</h2>
 <ul>
 <li>Validate all inputs at the boundary of your system</li>
 <li>Use assertions for internal invariants that must always be true</li>
@@ -1406,7 +1406,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="o">...</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-6-minimal-scope">Rule 6 — Minimal scope<a class="headerlink" href="#rule-6-minimal-scope" title="Permanent link">&para;</a></h2>
+<h2 id="rule-6-minimal-scope">Rule 6 — Minimal scope</h2>
 <ul>
 <li>Declare variables as close to their use as possible</li>
 <li>No module-level mutable state unless absolutely necessary</li>
@@ -1428,7 +1428,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="k">return</span> <span class="n">filter_results</span><span class="p">(</span><span class="n">processed</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-7-check-all-return-values">Rule 7 — Check all return values<a class="headerlink" href="#rule-7-check-all-return-values" title="Permanent link">&para;</a></h2>
+<h2 id="rule-7-check-all-return-values">Rule 7 — Check all return values</h2>
 <ul>
 <li>Never ignore return values</li>
 <li>Never use bare except — always catch specific exceptions</li>
@@ -1455,7 +1455,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="n">ScanResult</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-8-no-macro-equivalents">Rule 8 — No macro equivalents<a class="headerlink" href="#rule-8-no-macro-equivalents" title="Permanent link">&para;</a></h2>
+<h2 id="rule-8-no-macro-equivalents">Rule 8 — No macro equivalents</h2>
 <ul>
 <li>No monkey patching</li>
 <li>No dynamic attribute setting with <code>setattr</code> unless explicitly justified</li>
@@ -1470,7 +1470,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">host</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="n">value</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-9-limit-indirection">Rule 9 — Limit indirection<a class="headerlink" href="#rule-9-limit-indirection" title="Permanent link">&para;</a></h2>
+<h2 id="rule-9-limit-indirection">Rule 9 — Limit indirection</h2>
 <ul>
 <li>Maximum one level of abstraction per function call</li>
 <li>Avoid chains of wrappers that obscure what actually happens</li>
@@ -1491,7 +1491,7 @@ For NASA — spacecraft. For StrafeKit — engagement integrity.</p>
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">run_nmap</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>    <span class="c1"># one hop, clear what happens</span>
 </code></pre></div>
 <hr />
-<h2 id="rule-10-zero-tolerance">Rule 10 — Zero tolerance<a class="headerlink" href="#rule-10-zero-tolerance" title="Permanent link">&para;</a></h2>
+<h2 id="rule-10-zero-tolerance">Rule 10 — Zero tolerance</h2>
 <ul>
 <li>Mypy strict mode — zero type errors accepted</li>
 <li>Ruff — zero lint warnings accepted</li>

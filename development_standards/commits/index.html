@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/engineering/error-handling/">
+        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/development_standards/commits/">
       
       
-        <link rel="prev" href="../architecture/">
+        <link rel="prev" href="../nasa-rules/">
       
       
-        <link rel="next" href="../security/">
+        <link rel="next" href="../workflow/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Error Handling - StrafeKit</title>
+        <title>Commit Standards - StrafeKit</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#error-handling" class="md-skip">
+        <a href="#commit-messages" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Error Handling
+              Commit Standards
             
           </span>
         </div>
@@ -284,7 +284,7 @@
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -606,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -700,37 +700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Error Handling
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../error-handling/" class="md-nav__link">
         
   
   
@@ -746,103 +719,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-exception-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The exception hierarchy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pattern-one-base-children-inherit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pattern — one base, children inherit
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raising-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Raising exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#catching-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Catching exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chaining-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chaining exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-finally-clause-cleanup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The finally clause — cleanup
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -908,10 +784,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../commits/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commit Standards
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -927,6 +830,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strafekit-domain-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StrafeKit domain types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-line-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-line commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1137,10 +1126,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-exception-hierarchy" class="md-nav__link">
+  <a href="#format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The exception hierarchy
+        Format
       
     </span>
   </a>
@@ -1148,10 +1137,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pattern-one-base-children-inherit" class="md-nav__link">
+  <a href="#standard-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern — one base, children inherit
+        Standard types
       
     </span>
   </a>
@@ -1159,43 +1148,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#raising-exceptions" class="md-nav__link">
+  <a href="#strafekit-domain-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Raising exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#catching-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Catching exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chaining-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chaining exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-finally-clause-cleanup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The finally clause — cleanup
+        StrafeKit domain types
       
     </span>
   </a>
@@ -1207,6 +1163,28 @@
     <span class="md-ellipsis">
       
         Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-line-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-line commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking changes
       
     </span>
   </a>
@@ -1233,109 +1211,126 @@
   
 
 
-<h1 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h1>
-<p>StrafeKit uses a structured exception hierarchy.
-All exceptions live in <code>strafekit/core/domain/exceptions.py</code>.</p>
+<h1 id="commit-messages">Commit Messages</h1>
+<p>Conventional commits format enforced automatically by commitizen.
+Invalid messages are rejected before the commit completes.</p>
 <hr />
-<h2 id="the-exception-hierarchy">The exception hierarchy<a class="headerlink" href="#the-exception-hierarchy" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Exception                       ← Python built-in root
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    └── StrafekitError          ← catches any StrafeKit error
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            ├── CredentialError
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            ├── EngagementError
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            ├── ScanError
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            ├── SecretError
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            ├── StorageError
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            ├── ToolNotFoundError
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            └── ValidationError
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    ├── InvalidFieldError
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                    └── RequiredFieldError
+<h2 id="format">Format</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>type(scope): short description
 </code></pre></div>
-<p>The base <code>StrafekitError</code> catches all children.
-Specific exceptions give targeted handling.</p>
-<hr />
-<h2 id="pattern-one-base-children-inherit">Pattern — one base, children inherit<a class="headerlink" href="#pattern-one-base-children-inherit" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># exceptions.py</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">StrafekitError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Base exception for all StrafeKit errors.&quot;&quot;&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">pass</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">ScanError</span><span class="p">(</span><span class="n">StrafekitError</span><span class="p">):</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when a scan fails to complete.&quot;&quot;&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">pass</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">class</span><span class="w"> </span><span class="nc">ValidationError</span><span class="p">(</span><span class="n">StrafekitError</span><span class="p">):</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when input validation fails.&quot;&quot;&quot;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="k">pass</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">class</span><span class="w"> </span><span class="nc">RequiredFieldError</span><span class="p">(</span><span class="n">ValidationError</span><span class="p">):</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when a required field is missing or empty.&quot;&quot;&quot;</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">pass</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>feat(scan): add async nmap wrapper
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fix(creds): handle duplicate domain entries
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>docs(api): add docstrings to Host model
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>test(spray): add unit tests for password spray
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>scan(nmap): add service version detection
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>creds(sqlite): add domain filtering query
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>chore(deps): update textual to latest
 </code></pre></div>
 <hr />
-<h2 id="raising-exceptions">Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permanent link">&para;</a></h2>
-<p>Always include a descriptive message. Never raise generic <code>Exception</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># wrong</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;something went wrong&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># right</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">raise</span> <span class="n">ScanError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;nmap failed on </span><span class="si">{</span><span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">raise</span> <span class="n">RequiredFieldError</span><span class="p">(</span><span class="s2">&quot;ip&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">raise</span> <span class="n">ToolNotFoundError</span><span class="p">(</span><span class="s2">&quot;nmap is not installed&quot;</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="standard-types">Standard types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feat</code></td>
+<td>new feature</td>
+</tr>
+<tr>
+<td><code>fix</code></td>
+<td>bug fix</td>
+</tr>
+<tr>
+<td><code>docs</code></td>
+<td>documentation only</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>adding or updating tests</td>
+</tr>
+<tr>
+<td><code>refactor</code></td>
+<td>code change, no bug fix or feature</td>
+</tr>
+<tr>
+<td><code>chore</code></td>
+<td>dependency updates, config changes</td>
+</tr>
+<tr>
+<td><code>perf</code></td>
+<td>performance improvement</td>
+</tr>
+<tr>
+<td><code>ci</code></td>
+<td>CI/CD pipeline changes</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>build system changes</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>formatting changes, no logic change</td>
+</tr>
+<tr>
+<td><code>revert</code></td>
+<td>reverting a previous commit</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="catching-exceptions">Catching exceptions<a class="headerlink" href="#catching-exceptions" title="Permanent link">&para;</a></h2>
-<p>Specific exceptions before broad ones. Never use bare <code>except</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># wrong — bare except, silent failure</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">scan_host</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">except</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">pass</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># right — specific first, broad as fallback</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">scan_and_save</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">except</span> <span class="n">ScanError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;scan failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">retry_scan</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">except</span> <span class="n">StorageError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;database failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">except</span> <span class="n">StrafekitError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;unexpected error: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="strafekit-domain-types">StrafeKit domain types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scan</code></td>
+<td>scanning infrastructure — nmap, masscan, gobuster wrappers and scan logic</td>
+</tr>
+<tr>
+<td><code>creds</code></td>
+<td>credential management — storage, spray logic, hash handling, export</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="chaining-exceptions">Chaining exceptions<a class="headerlink" href="#chaining-exceptions" title="Permanent link">&para;</a></h2>
-<p>Preserve the original cause when wrapping exceptions:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;nmap&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">raise</span> <span class="n">ToolNotFoundError</span><span class="p">(</span><span class="s2">&quot;nmap is not installed&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">#                                                    ↑</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">#                           preserves original FileNotFoundError as context</span>
-</code></pre></div>
-<hr />
-<h2 id="the-finally-clause-cleanup">The <code>finally</code> clause — cleanup<a class="headerlink" href="#the-finally-clause-cleanup" title="Permanent link">&para;</a></h2>
-<p><code>finally</code> always runs regardless of whether an exception occurred:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">save_results</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="n">Host</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">db</span> <span class="o">=</span> <span class="n">open_database</span><span class="p">()</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">scan_host</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">db</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="k">except</span> <span class="n">ScanError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;scan failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">finally</span><span class="p">:</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    <span class="c1"># always runs — connection never leaks</span>
-</code></pre></div>
-<hr />
-<h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
+<h2 id="rules">Rules</h2>
 <ul>
-<li>Never raise generic <code>Exception</code> — always a specific type</li>
-<li>Never use bare <code>except:</code> — always catch specific types</li>
-<li>Never ignore exceptions silently — always handle or re-raise</li>
-<li>Specific exceptions before broad ones in except blocks</li>
-<li>Use <code>raise X from e</code> to chain and preserve original cause</li>
-<li>Always include a message when raising</li>
-<li>Add new exceptions to <code>exceptions.py</code> — never define them inline</li>
+<li>Type is required</li>
+<li>Scope is optional but recommended — use the component name</li>
+<li>Description is required, lowercase, no period at end</li>
+<li>No ticket numbers in the message — use the commit body for that</li>
+<li>Keep description under 72 characters</li>
 </ul>
+<hr />
+<h2 id="multi-line-commits">Multi-line commits</h2>
+<p>For significant changes add a body explaining why:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>feat(scan): add async nmap wrapper
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Previously ServiceScan blocked the UI thread while nmap ran.
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>This wraps nmap in asyncio.create_subprocess_exec so the UI
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>stays responsive during long scans. Results stream line by line
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>into the hosts panel via message passing.
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Closes #14
+</code></pre></div>
+<hr />
+<h2 id="breaking-changes">Breaking changes</h2>
+<p>Add <code>!</code> after the type and a footer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>feat(db)!: migrate credential storage to SQLCipher
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>BREAKING CHANGE: existing engagement databases must be re-imported.
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Run `strafekit migrate --engagement corp-pentest-05` to convert.
+</code></pre></div>
 
 
 

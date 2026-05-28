@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/engineering/security/">
+        <link rel="canonical" href="https://strafendestroy.github.io/strafekit/development_standards/error-handling/">
       
       
-        <link rel="prev" href="../error-handling/">
+        <link rel="prev" href="../architecture/">
       
       
-        <link rel="next" href="../nasa-rules/">
+        <link rel="next" href="../security/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Security Rules - StrafeKit</title>
+        <title>Error Handling - StrafeKit</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#security-rules" class="md-skip">
+        <a href="#error-handling" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Security Rules
+              Error Handling
             
           </span>
         </div>
@@ -284,7 +284,7 @@
           
   
   
-  Engineering
+  Devlopment Standards
 
         </a>
       </li>
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    Engineering
+    Devlopment Standards
   
 
     
@@ -606,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Engineering
+    Devlopment Standards
   
 
           </label>
@@ -700,34 +700,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../error-handling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Error Handling
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -747,7 +719,7 @@
   <span class="md-ellipsis">
     
   
-    Security Rules
+    Error Handling
   
 
     
@@ -765,7 +737,7 @@
   <span class="md-ellipsis">
     
   
-    Security Rules
+    Error Handling
   
 
     
@@ -791,10 +763,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#credentials-and-secrets" class="md-nav__link">
+  <a href="#the-exception-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Credentials and secrets
+        The exception hierarchy
       
     </span>
   </a>
@@ -802,10 +774,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subprocess-calls" class="md-nav__link">
+  <a href="#pattern-one-base-children-inherit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subprocess calls
+        Pattern — one base, children inherit
       
     </span>
   </a>
@@ -813,10 +785,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-paths" class="md-nav__link">
+  <a href="#raising-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        File paths
+        Raising exceptions
       
     </span>
   </a>
@@ -824,10 +796,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-validation" class="md-nav__link">
+  <a href="#catching-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input validation
+        Catching exceptions
       
     </span>
   </a>
@@ -835,10 +807,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-logging" class="md-nav__link">
+  <a href="#chaining-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audit logging
+        Chaining exceptions
       
     </span>
   </a>
@@ -846,10 +818,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-encryption" class="md-nav__link">
+  <a href="#the-finally-clause-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Database encryption
+        The finally clause — cleanup
       
     </span>
   </a>
@@ -857,10 +829,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-checklist" class="md-nav__link">
+  <a href="#rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary checklist
+        Rules
       
     </span>
   </a>
@@ -871,6 +843,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1137,10 +1137,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#credentials-and-secrets" class="md-nav__link">
+  <a href="#the-exception-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Credentials and secrets
+        The exception hierarchy
       
     </span>
   </a>
@@ -1148,10 +1148,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subprocess-calls" class="md-nav__link">
+  <a href="#pattern-one-base-children-inherit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subprocess calls
+        Pattern — one base, children inherit
       
     </span>
   </a>
@@ -1159,10 +1159,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-paths" class="md-nav__link">
+  <a href="#raising-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        File paths
+        Raising exceptions
       
     </span>
   </a>
@@ -1170,10 +1170,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-validation" class="md-nav__link">
+  <a href="#catching-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input validation
+        Catching exceptions
       
     </span>
   </a>
@@ -1181,10 +1181,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-logging" class="md-nav__link">
+  <a href="#chaining-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audit logging
+        Chaining exceptions
       
     </span>
   </a>
@@ -1192,10 +1192,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-encryption" class="md-nav__link">
+  <a href="#the-finally-clause-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Database encryption
+        The finally clause — cleanup
       
     </span>
   </a>
@@ -1203,10 +1203,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-checklist" class="md-nav__link">
+  <a href="#rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary checklist
+        Rules
       
     </span>
   </a>
@@ -1233,91 +1233,108 @@
   
 
 
-<h1 id="security-rules">Security Rules<a class="headerlink" href="#security-rules" title="Permanent link">&para;</a></h1>
-<p>Non-negotiable requirements for a penetration testing framework.
-StrafeKit handles sensitive engagement data — these rules protect it.</p>
+<h1 id="error-handling">Error Handling</h1>
+<p>StrafeKit uses a structured exception hierarchy.
+All exceptions live in <code>strafekit/core/domain/exceptions.py</code>.</p>
 <hr />
-<h2 id="credentials-and-secrets">Credentials and secrets<a class="headerlink" href="#credentials-and-secrets" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Never hardcode credentials, tokens, or API keys in source code</li>
-<li>Never commit <code>.env</code> files or <code>user.toml</code> to version control</li>
-<li>Store API keys in the OS keyring via <code>KeyringSecretStore</code></li>
-<li>Store engagement database encryption key in the OS keyring</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># wrong — hardcoded credential</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">SHODAN_API_KEY</span> <span class="o">=</span> <span class="s2">&quot;abc123xyz&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># right — read from keyring at runtime</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">api_key</span> <span class="o">=</span> <span class="n">secret_store</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;shodan_api_key&quot;</span><span class="p">)</span>
+<h2 id="the-exception-hierarchy">The exception hierarchy</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Exception                       ← Python built-in root
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    └── StrafekitError          ← catches any StrafeKit error
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            ├── CredentialError
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            ├── EngagementError
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            ├── ScanError
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            ├── SecretError
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            ├── StorageError
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            ├── ToolNotFoundError
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            └── ValidationError
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    ├── InvalidFieldError
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                    └── RequiredFieldError
+</code></pre></div>
+<p>The base <code>StrafekitError</code> catches all children.
+Specific exceptions give targeted handling.</p>
+<hr />
+<h2 id="pattern-one-base-children-inherit">Pattern — one base, children inherit</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># exceptions.py</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">StrafekitError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Base exception for all StrafeKit errors.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">pass</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">ScanError</span><span class="p">(</span><span class="n">StrafekitError</span><span class="p">):</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when a scan fails to complete.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">pass</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">class</span><span class="w"> </span><span class="nc">ValidationError</span><span class="p">(</span><span class="n">StrafekitError</span><span class="p">):</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when input validation fails.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="k">pass</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">class</span><span class="w"> </span><span class="nc">RequiredFieldError</span><span class="p">(</span><span class="n">ValidationError</span><span class="p">):</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when a required field is missing or empty.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">pass</span>
 </code></pre></div>
 <hr />
-<h2 id="subprocess-calls">Subprocess calls<a class="headerlink" href="#subprocess-calls" title="Permanent link">&para;</a></h2>
-<p>Never use <code>shell=True</code> without explicit justification in a comment.
-Always use explicit argument lists — never shell strings.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># wrong — shell injection possible</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;nmap </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;nmap &quot;</span> <span class="o">+</span> <span class="n">target</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># right — explicit argument list, no shell injection possible</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;nmap&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;nmap&quot;</span><span class="p">,</span> <span class="s2">&quot;-sV&quot;</span><span class="p">,</span> <span class="s2">&quot;-sC&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<h2 id="raising-exceptions">Raising exceptions</h2>
+<p>Always include a descriptive message. Never raise generic <code>Exception</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># wrong</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;something went wrong&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># right</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">raise</span> <span class="n">ScanError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;nmap failed on </span><span class="si">{</span><span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">raise</span> <span class="n">RequiredFieldError</span><span class="p">(</span><span class="s2">&quot;ip&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">raise</span> <span class="n">ToolNotFoundError</span><span class="p">(</span><span class="s2">&quot;nmap is not installed&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="file-paths">File paths<a class="headerlink" href="#file-paths" title="Permanent link">&para;</a></h2>
-<p>Always use <code>Path()</code> — never string concatenation.
-Always validate that paths stay within the engagement directory.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># wrong — path traversal possible</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/engagements/</span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">/results.txt&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/engagements/&quot;</span> <span class="o">+</span> <span class="n">engagement_name</span> <span class="o">+</span> <span class="s2">&quot;/results.txt&quot;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># right — Path validates and resolves</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">engagement_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/engagements&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">engagement_name</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">results_file</span> <span class="o">=</span> <span class="n">engagement_path</span> <span class="o">/</span> <span class="s2">&quot;results.txt&quot;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># validate path stays within engagements directory</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">results_file</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/engagements&quot;</span><span class="p">))</span>
-</code></pre></div>
-<hr />
-<h2 id="input-validation">Input validation<a class="headerlink" href="#input-validation" title="Permanent link">&para;</a></h2>
-<p>Always validate external input at the boundary of your system.
-External input includes: user input, database reads, API responses, file contents.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># validate at the boundary — __post_init__ on dataclasses</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nd">@dataclass</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Host</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">ip</span><span class="p">:</span> <span class="nb">str</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">engagement_id</span><span class="p">:</span> <span class="nb">int</span>
+<h2 id="catching-exceptions">Catching exceptions</h2>
+<p>Specific exceptions before broad ones. Never use bare <code>except</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># wrong — bare except, silent failure</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">scan_host</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">except</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">pass</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="p">:</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="k">raise</span> <span class="n">RequiredFieldError</span><span class="p">(</span><span class="s2">&quot;ip&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">engagement_id</span><span class="p">:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            <span class="k">raise</span> <span class="n">RequiredFieldError</span><span class="p">(</span><span class="s2">&quot;engagement_id&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># right — specific first, broad as fallback</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">scan_and_save</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">except</span> <span class="n">ScanError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;scan failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">retry_scan</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">except</span> <span class="n">StorageError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;database failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">except</span> <span class="n">StrafekitError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;unexpected error: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="audit-logging">Audit logging<a class="headerlink" href="#audit-logging" title="Permanent link">&para;</a></h2>
-<p>All credential operations must be logged through the audit log.
-Who accessed what credential, when, and from where.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># every credential read/write goes through audit log</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">credential_store</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">credential</span><span class="p">)</span>      <span class="c1"># logged</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">credential_store</span><span class="o">.</span><span class="n">find_by_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>  <span class="c1"># logged</span>
+<h2 id="chaining-exceptions">Chaining exceptions</h2>
+<p>Preserve the original cause when wrapping exceptions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;nmap&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">.</span><span class="n">ip</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">raise</span> <span class="n">ToolNotFoundError</span><span class="p">(</span><span class="s2">&quot;nmap is not installed&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">#                                                    ↑</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">#                           preserves original FileNotFoundError as context</span>
 </code></pre></div>
 <hr />
-<h2 id="database-encryption">Database encryption<a class="headerlink" href="#database-encryption" title="Permanent link">&para;</a></h2>
-<p>Engagement databases are encrypted at rest using SQLCipher.
-The encryption key lives in the OS keyring — never on disk as plaintext.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># connection always uses key from keyring</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">key</span> <span class="o">=</span> <span class="n">secret_store</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;engagement_db_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sqlite+pysqlcipher://:</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">@/engagement.db&quot;</span><span class="p">)</span>
+<h2 id="the-finally-clause-cleanup">The <code>finally</code> clause — cleanup</h2>
+<p><code>finally</code> always runs regardless of whether an exception occurred:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">save_results</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="n">Host</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">db</span> <span class="o">=</span> <span class="n">open_database</span><span class="p">()</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">scan_host</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">db</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="k">except</span> <span class="n">ScanError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;scan failed: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    <span class="c1"># always runs — connection never leaks</span>
 </code></pre></div>
 <hr />
-<h2 id="summary-checklist">Summary checklist<a class="headerlink" href="#summary-checklist" title="Permanent link">&para;</a></h2>
+<h2 id="rules">Rules</h2>
 <ul>
-<li>[ ] No hardcoded credentials or API keys</li>
-<li>[ ] No <code>shell=True</code> without justification comment</li>
-<li>[ ] All paths use <code>Path()</code> and stay within engagement directory</li>
-<li>[ ] All external input validated at boundaries</li>
-<li>[ ] All credential operations logged</li>
-<li>[ ] Secrets stored in OS keyring not plaintext files</li>
+<li>Never raise generic <code>Exception</code> — always a specific type</li>
+<li>Never use bare <code>except:</code> — always catch specific types</li>
+<li>Never ignore exceptions silently — always handle or re-raise</li>
+<li>Specific exceptions before broad ones in except blocks</li>
+<li>Use <code>raise X from e</code> to chain and preserve original cause</li>
+<li>Always include a message when raising</li>
+<li>Add new exceptions to <code>exceptions.py</code> — never define them inline</li>
 </ul>
 
 
