@@ -3,7 +3,7 @@ date: 2026-05-28
 authors:
   - strafendestroy
 categories:
-  - Infrastructure Design
+  - Infrastructure
 ---
 
 # Industry Infrastructure
